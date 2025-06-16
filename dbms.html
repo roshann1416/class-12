@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Database Concepts - Detailed Overview</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    :root {
+      --primary-color: #4a90e2;
+      --background-color: #fefefe;
+      --text-color: #2c3e50;
+      --heading-color: #1a233a;
+      --border-color: #e0e6f1;
+      --accent-color: #38bdf8;
+      --code-bg: #f5f7fa;
+      --code-border: #d1d9e6;
+      --link-color: #3b82f6;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--background-color);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1, h2, h3 {
+      color: var(--heading-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    section {
+      background-color: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgb(60 64 67 / 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 8px 16px rgb(60 64 67 / 0.15);
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: 'Source Code Pro', monospace, monospace;
+      background-color: var(--code-bg);
+      border: 1px solid var(--code-border);
+      padding: 0.2em 0.4em;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #1e293b;
+    }
+
+    /* Responsive spacing */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 1rem;
+      }
+      section {
+        padding: 1rem 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Database Concepts - Detailed Overview</h1>
+
+  <section>
+    <h2>Data</h2>
+    <p>Data refers to raw, unprocessed facts or figures. It can be numbers, characters, images, or any other outputs from devices or systems. On its own, data has no inherent meaning until processed or interpreted.</p>
+  </section>
+
+  <section>
+    <h2>Information</h2>
+    <p>Information is processed data that has been organized or structured such that it has meaning and is useful for decision making, analysis, or communication.</p>
+  </section>
+
+  <section>
+    <h2>Features of Information</h2>
+    <ul>
+      <li><strong>Accuracy:</strong> Information must be correct and free from errors.</li>
+      <li><strong>Relevance:</strong> Must be applicable and useful for the purpose it is intended.</li>
+      <li><strong>Timeliness:</strong> Should be available when needed.</li>
+      <li><strong>Completeness:</strong> Contains all necessary data points.</li>
+      <li><strong>Consistency:</strong> Should be the same across different sources and time.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Database and its Purpose</h2>
+    <p>A <strong>database</strong> is an organized collection of data stored electronically. It allows efficient storage, retrieval, and management of data. Its main purpose is to handle large amounts of data and provide controlled access to multiple users.</p>
+  </section>
+
+  <section>
+    <h2>Terminologies in Database</h2>
+    <ul>
+      <li><strong>Table:</strong> A collection of related data entries organized in rows and columns.</li>
+      <li><strong>Field:</strong> A single attribute or column in a table, representing a data category.</li>
+      <li><strong>Record:</strong> A single row in a table containing related data fields, also called a tuple.</li>
+      <li><strong>Tuple:</strong> Another name for a record or row in a table.</li>
+      <li><strong>Object:</strong> In object-oriented databases, an entity that contains both data and methods.</li>
+      <li><strong>Keys:</strong> Attributes used to uniquely identify records (e.g., Primary Key, Foreign Key).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data Dictionary</h2>
+    <p>A <em>data dictionary</em> is a centralized repository that contains descriptions of data objects or items within the database, including their characteristics, relationships, and constraints. It helps maintain data consistency and understanding.</p>
+  </section>
+
+  <section>
+    <h2>Database Management System (DBMS)</h2>
+    <h3>Introduction</h3>
+    <p>A DBMS is software that manages databases. It provides an interface between users/applications and the database, handling data storage, queries, updates, and administration.</p>
+    
+    <h3>Objectives</h3>
+    <ul>
+      <li>Efficient data storage, retrieval, and manipulation.</li>
+      <li>Maintain data integrity and security.</li>
+      <li>Support concurrent multi-user access.</li>
+    </ul>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Improved data sharing across applications.</li>
+      <li>Enhanced data security and privacy.</li>
+      <li>Minimized data redundancy.</li>
+      <li>Easier data access through query languages.</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li>High initial setup and maintenance costs.</li>
+      <li>Complexity requiring trained personnel.</li>
+      <li>Potential performance overhead.</li>
+      <li>Possibility of data breaches if not secured properly.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Types of Database Models</h2>
+    <ul>
+      <li><strong>Hierarchical Model:</strong> Organizes data in a tree structure with parent-child relationships.</li>
+      <li><strong>Network Model:</strong> More flexible than hierarchical, allows many-to-many relationships represented as graph structures.</li>
+      <li><strong>Relational Model:</strong> Represents data in tables with rows and columns; most widely used model.</li>
+      <li><strong>Entity-Relational Model:</strong> Extension of relational model incorporating entities and relationships, used for designing schemas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Integrity Constraints and Types</h2>
+    <ul>
+      <li><strong>Domain Constraint:</strong> Specifies allowable values for an attribute (e.g., data type and range).</li>
+      <li><strong>Entity Integrity:</strong> Ensures each row has a unique primary key (no null or duplicate keys).</li>
+      <li><strong>Referential Integrity:</strong> Ensures foreign keys correctly reference existing entries in related tables.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Keys</h2>
+    <p>Keys uniquely identify records or link tables. Common types are:</p>
+    <ul>
+      <li><strong>Primary Key:</strong> Uniquely identifies each record in a table.</li>
+      <li><strong>Foreign Key:</strong> Attribute in one table that references a primary key in another.</li>
+      <li><strong>Candidate Key:</strong> Any attribute(s) capable of being a primary key.</li>
+      <li><strong>Composite Key:</strong> A key made up of multiple attributes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Normalization</h2>
+    <h3>Introduction</h3>
+    <p>Normalization is a systematic process of organizing data in a database to reduce redundancy and dependency.</p>
+
+    <h3>Normal Forms</h3>
+    <ul>
+      <li><strong>First Normal Form (1NF):</strong> Eliminate repeating groups; each field contains atomic values only.</li>
+      <li><strong>Second Normal Form (2NF):</strong> Remove partial dependencies; non-key attributes depend fully on the primary key.</li>
+      <li><strong>Third Normal Form (3NF):</strong> Remove transitive dependencies; non-key attributes depend only on the primary key.</li>
+    </ul>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li>Minimizes data redundancy.</li>
+      <li>Improves data integrity and consistency.</li>
+      <li>Eases maintenance and updates.</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li>Normalization can lead to complex joins impacting performance.</li>
+      <li>May complicate queries with multiple table joins.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Centralized and Distributed Database</h2>
+    <h3>Introduction</h3>
+    <p>A centralized database is stored and managed at a single location. Distributed databases distribute storage across multiple physical locations.</p>
+
+    <h3>Advantages</h3>
+    <ul>
+      <li><strong>Centralized:</strong> Easier management and backup.</li>
+      <li><strong>Distributed:</strong> Improved reliability, availability, and local performance.</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+      <li><strong>Centralized:</strong> Single point of failure, potential bottleneck.</li>
+      <li><strong>Distributed:</strong> Complex synchronization and security management.</li>
+    </ul>
+
+    <h3>Comparison</h3>
+    <p>Distributed databases offer scalability and fault tolerance, while centralized databases simplify administration.</p>
+  </section>
+
+  <section>
+    <h2>Database Security</h2>
+    <h3>Introduction</h3>
+    <p>The practice of protecting database systems against unauthorized access, data breaches, or misuse.</p>
+
+    <h3>Challenges</h3>
+    <ul>
+      <li>Cyber-attacks and hacking attempts.</li>
+      <li>Managing access control rights.</li>
+      <li>Ensuring data privacy and regulatory compliance.</li>
+    </ul>
+
+    <h3>Security Measures</h3>
+    <ul>
+      <li>Implementing strong access control and authentication.</li>
+      <li>Encrypting sensitive data.</li>
+      <li>Regular auditing and monitoring.</li>
+      <li>Backup and disaster recovery plans.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Roles of DBA (Database Administrator)</h2>
+    <p>The DBA is responsible for:</p>
+    <ul>
+      <li>Installing and configuring the database software.</li>
+      <li>Managing security and permissions.</li>
+      <li>Performing backups and recovery.</li>
+      <li>Monitoring performance and tuning.</li>
+      <li>Ensuring database availability and integrity.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Practical Topics</h2>
+    <h3>DDL and DML Languages</h3>
+    <p><strong>Data Definition Language (DDL):</strong> Commands to define or modify database structure, e.g., <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>.</p>
+    <p><strong>Data Manipulation Language (DML):</strong> Commands to manipulate data, e.g., <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>SELECT</code>.</p>
+
+    <h3>SQL Data Types Explained with Examples</h3>
+    <ul>
+      <li><code>CHAR(n)</code>: Fixed-length string. <br/><em>Example:</em> 'abc  ' for <code>CHAR(5)</code>.</li>
+      <li><code>VARCHAR(n)</code>: Variable-length string.<br/><em>Example:</em> 'hello' stored as 5 bytes.</li>
+      <li><code>BINARY(n)</code>: Fixed-length binary data.<br/><em>Example:</em> 0x4D7953 for binary.</li>
+      <li><code>VARBINARY(n)</code>: Variable-length binary data.</li>
+      <li><code>TINYBLOB</code>: Small binary object, max 255 bytes.</li>
+      <li><code>TINYTEXT</code>: Small text, max 255 characters.</li>
+      <li><code>TEXT</code>: Larger text, max 65,535 characters.</li>
+      <li><code>LONGTEXT</code>: Very large text, max 4GB.</li>
+      <li><code>ENUM</code>: Enumeration of values.<br/><em>Example:</em> <code>ENUM('small','medium','large')</code>.</li>
+      <li><code>BIT</code>: Bit-field storing 0 or 1.</li>
+      <li><code>TINYINT</code>: Small integer (-128 to 127).</li>
+      <li><code>BOOLEAN</code>: True/False (alias for tinyint(1)).</li>
+      <li><code>INTEGER</code>: Standard integer.</li>
+      <li><code>FLOAT</code>: Approximate floating point.</li>
+      <li><code>DOUBLE</code>: Double precision floating point.</li>
+      <li><code>DECIMAL(p,s)</code>: Exact numeric with precision.<br/><em>Example:</em> <code>DECIMAL(10,2)</code> for currency.</li>
+      <li><code>DATE</code>: Date value (YYYY-MM-DD).</li>
+      <li><code>DATETIME</code>: Date and time (YYYY-MM-DD HH:MM:SS).</li>
+    </ul>
+  </section>
+
+</body>
+</html>
+

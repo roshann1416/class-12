@@ -1,0 +1,121 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F9F9F9; /* Off-White */
+  color: #333333; /* Charcoal Gray */
+}
+
+/* Header */
+.header {
+  background-color: #A4C8E1; /* Soft Blue */
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #2C3E50; /* Dark Slate Blue */
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #007B7F; /* Deep Teal */
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #FF6F61; /* Warm Coral */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #B2E0D4; /* Light Mint Green */
+  color: #2C3E50;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #E0E0E0; /* Light Gray */
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  background-color: #E0E0E0; /* Hover Effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2C3E50;
+  margin-top: 0;
+}
+
+.card p {
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #FFD700; /* Golden Yellow */
+  color: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #FF6F61; /* Warm Coral */
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background-color: #2C3E50; /* Dark Slate Blue */
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
