@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 4: C Programming - Functions</title>
+</head>
+<body style="background-color: #f7f4e9; margin: 0; padding: 20px; font-family: Arial, sans-serif; color: #333;">
+
+  <section style="background-color: #fdf6e3; padding: 30px 35px; border-radius: 10px; max-width: 900px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); line-height: 1.7;">
+    
+    <h2 style="color: #d35400; border-bottom: 3px solid #e67e22; padding-bottom: 6px; margin-bottom: 25px;">Unit 4: C Programming - Functions</h2>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Introduction and Syntax</h3>
+    <p>A <strong>function</strong> is a block of code designed to perform a particular task. It helps to divide the program into smaller, manageable parts.</p>
+    <p><em>Syntax example:</em></p>
+    <pre style="background-color: #f0e6d2; padding: 12px; border-radius: 6px; overflow-x: auto;">
+return_type function_name(parameter_list) {
+  // body of function
+}
+    </pre>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Purpose and Advantages</h3>
+    <ul style="margin-left: 20px; margin-bottom: 20px;">
+      <li>Modularizes code making it easier to debug and maintain.</li>
+      <li>Enables code reuse to avoid redundancy.</li>
+      <li>Makes programs more readable and organized.</li>
+    </ul>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Components of a Function</h3>
+    <ul style="margin-left: 20px; margin-bottom: 20px;">
+      <li><strong>Prototype:</strong> Declaration specifying the function’s name, return type, and parameters.</li>
+      <li><strong>Function Definition:</strong> Actual body containing the statements to execute.</li>
+      <li><strong>Function Call:</strong> Invocation of the function to execute its code.</li>
+      <li><strong>Return Statement:</strong> Returns a value to the calling function (if applicable).</li>
+    </ul>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Prototype Example</h3>
+    <pre style="background-color: #f0e6d2; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int add(int, int);
+    </pre>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Function Definition Example</h3>
+    <pre style="background-color: #f0e6d2; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int add(int a, int b) {
+  return a + b;
+}
+    </pre>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Function Call Example</h3>
+    <pre style="background-color: #f0e6d2; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int result = add(5, 3);
+    </pre>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Types of Functions</h3>
+    <ul style="margin-left: 20px; margin-bottom: 20px;">
+      <li><strong>Library Functions:</strong> Predefined functions like <code>printf()</code>, <code>scanf()</code>.</li>
+      <li><strong>User Defined Functions:</strong> Functions created by the programmer.</li>
+    </ul>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Passing Arguments</h3>
+    <p>Arguments can be passed to functions in two ways:</p>
+    <ul style="margin-left: 20px; margin-bottom: 20px;">
+      <li><strong>Call by Value:</strong> Copies the actual value into the function’s parameters.</li>
+      <li><strong>Call by Reference:</strong> Passes the address of the variable allowing function to modify the original value.</li>
+    </ul>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Variable Scope</h3>
+    <ul style="margin-left: 20px; margin-bottom: 20px;">
+      <li><strong>Local Variables:</strong> Declared inside functions, accessible only within that function.</li>
+      <li><strong>Global Variables:</strong> Declared outside all functions, accessible from any part of the program.</li>
+    </ul>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Storage Classes</h3>
+    <p>Storage class defines the lifetime and visibility of variables:</p>
+    <ul style="margin-left: 20px; margin-bottom: 25px;">
+      <li><strong>Automatic (auto):</strong> Default for local variables, created and destroyed automatically.</li>
+      <li><strong>External (extern):</strong> Refers to global variables declared outside functions.</li>
+      <li><strong>Static:</strong> Retains value between function calls, local scope.</li>
+      <li><strong>Register:</strong> Stores variable in CPU register for faster access (limited size).</li>
+    </ul>
+
+    <h3 style="color: #c0392b; margin-bottom: 10px;">Function with Array Example</h3>
+    <pre style="background-color: #f0e6d2; padding: 12px; border-radius: 6px; overflow-x: auto;">
+void printArray(int arr[], int size) {
+  for(int i = 0; i < size; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\n");
+}
+    </pre>
+
+  </section>
+ 
+<body style="background-color: #f7f4e9; margin: 0; padding: 20px; font-family: Arial, sans-serif; color: #333;">
+
+  <section style="background-color: #e8f0fe; padding: 30px 35px; border-radius: 10px; max-width: 900px; margin: 30px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); line-height: 1.7;">
+    
+    <h2 style="color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 6px; margin-bottom: 25px;">
+      Unit 4: C Programming - Recursive Functions, Structure, Union & Pointers
+    </h2>
+
+    <!-- Recursive Function -->
+    <h3 style="color: #283593; margin-bottom: 10px;">Recursive Function</h3>
+    <p>A recursive function calls itself to solve smaller instances of the same problem until it reaches a base condition.</p>
+    <p><strong>Syntax:</strong></p>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+return_type function_name(parameters) {
+  if (base_condition)
+    return base_value;
+  else
+    return function_name(smaller_problem);
+}
+    </pre>
+
+    <p><strong>Example: Factorial using recursion</strong></p>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int factorial(int n) {
+  if (n == 0)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}
+    </pre>
+
+    <h4>Advantages</h4>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li>Simplifies code for problems with repetitive structure.</li>
+      <li>Easier to write and understand for problems like factorial, Fibonacci, tree traversal.</li>
+    </ul>
+
+    <h4>Disadvantages</h4>
+    <ul style="margin-left: 20px; margin-bottom: 25px;">
+      <li>Consumes more memory due to function call stack.</li>
+      <li>Can lead to stack overflow if recursion depth is too large.</li>
+    </ul>
+
+    <!-- Structure -->
+    <h3 style="color: #283593; margin-bottom: 10px;">Structure</h3>
+    <p>A structure is a user-defined data type in C that groups related variables of different data types under one name.</p>
+    <p><strong>Syntax:</strong></p>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+struct structure_name {
+  data_type member1;
+  data_type member2;
+  ...
+};
+    </pre>
+
+    <h4>Structure Size</h4>
+    <p>The size of a structure is the sum of sizes of all its members (considering padding).</p>
+
+    <h4>Accessing Members</h4>
+    <p>Use the dot <code>.</code> operator to access structure members.</p>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+struct Point {
+  int x;
+  int y;
+};
+
+struct Point p1;
+p1.x = 10;
+p1.y = 20;
+    </pre>
+
+    <h4>Nested Structure Example</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+struct Date {
+  int day;
+  int month;
+  int year;
+};
+
+struct Student {
+  char name[50];
+  struct Date dob;  // nested structure
+};
+    </pre>
+
+    <h4>Array of Structures Example</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+struct Student {
+  char name[50];
+  int roll_no;
+};
+
+struct Student class[30];  // array of 30 students
+    </pre>
+
+    <h4>Passing Structure to Function Example</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+void printStudent(struct Student s) {
+  printf("Name: %s, Roll No: %d\n", s.name, s.roll_no);
+}
+    </pre>
+
+    <!-- Union -->
+    <h3 style="color: #283593; margin-bottom: 10px;">Union</h3>
+    <p>A union is a user-defined data type where all members share the same memory location.</p>
+    <p><strong>Syntax:</strong></p>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+union union_name {
+  data_type member1;
+  data_type member2;
+  ...
+};
+    </pre>
+
+    <h4>Comparison between Structure and Union</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+      <thead>
+        <tr style="background-color: #3949ab; color: white;">
+          <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+          <th style="padding: 8px; border: 1px solid #ddd;">Structure</th>
+          <th style="padding: 8px; border: 1px solid #ddd;">Union</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">Memory</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Each member has its own memory.</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">All members share the same memory.</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">Size</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Sum of all members’ sizes.</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Size of the largest member.</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">Usage</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Used when all members are needed simultaneously.</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Used to save memory when only one member is used at a time.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pointers -->
+    <h3 style="color: #283593; margin-bottom: 10px;">Pointers</h3>
+    <p>A pointer is a variable that stores the memory address of another variable.</p>
+
+    <h4>Syntax</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+data_type *pointer_name;
+    </pre>
+
+    <h4>Usage and Working</h4>
+    <ul style="margin-left: 20px; margin-bottom: 20px;">
+      <li>Store addresses of variables.</li>
+      <li>Enable indirect access and manipulation of data.</li>
+      <li>Used in dynamic memory allocation, arrays, and functions.</li>
+    </ul>
+
+    <h4>Concept of Value and Address</h4>
+    <p><code>*</code> operator is used to access the value at the address (dereferencing).</p>
+    <p><code>&</code> operator is used to get the address of a variable.</p>
+
+    <h4>Declaration and Initialization</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int a = 10;
+int *p = &a;  // p stores address of a
+    </pre>
+
+    <h4>Pointer and Function Example</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+void increment(int *p) {
+  (*p)++;
+}
+
+int main() {
+  int x = 5;
+  increment(&x);
+  printf("%d", x);  // Output: 6
+  return 0;
+}
+    </pre>
+
+    <h4>Call by Reference with Pointer Example</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+int main() {
+  int x = 10, y = 20;
+  swap(&x, &y);
+  printf("x = %d, y = %d", x, y);  // Output: x = 20, y = 10
+  return 0;
+}
+    </pre>
+
+    <h4>Comparison: Call by Value vs Call by Reference</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+      <thead>
+        <tr style="background-color: #3949ab; color: white;">
+          <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+          <th style="padding: 8px; border: 1px solid #ddd;">Call by Value</th>
+          <th style="padding: 8px; border: 1px solid #ddd;">Call by Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">Parameter passing</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Passes copy of value.</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Passes address (reference).</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">Effect on actual variable</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">No change.</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Changes actual variable.</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd;">Memory usage</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">More (copies values).</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">Less (passes address only).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Pointer with Arrays Example</h4>
+    <pre style="background-color: #d1d9ff; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int arr[] = {10, 20, 30};
+int *p = arr;  // points to arr[0]
+printf("%d", *(p + 1));  // Output: 20
+    </pre>
+
+    <h4>Advantages of Pointers</h4>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li>Efficient array and string manipulation.</li>
+      <li>Dynamic memory allocation.</li>
+      <li>Enables call by reference.</li>
+      <li>Facilitates complex data structures (linked lists, trees).</li>
+    </ul>
+
+    <h4>Disadvantages of Pointers</h4>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li>Complex to understand for beginners.</li>
+      <li>Risk of memory leaks and dangling pointers.</li>
+      <li>Can cause security vulnerabilities if misused.</li>
+    </ul>
+
+  </section>
+<"background-color: #fef6e4; margin: 0; padding: 20px; font-family: Verdana, sans-serif; color: #222;">
+
+  <section style="max-width: 900px; margin: 30px auto; background-color: #fff9db; padding: 30px 40px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); line-height: 1.6;">
+
+    <h2 style="color: #b37400; border-bottom: 3px solid #ffb300; padding-bottom: 6px; margin-bottom: 25px;">
+      Unit 4: C Programming - File Handling
+    </h2>
+
+    <!-- Concept of Data File -->
+    <h3 style="color: #996600; margin-bottom: 10px;">Concept of Data File</h3>
+    <p>A data file is a collection of related information stored permanently on secondary storage devices like hard disks or SSDs. It allows programs to read and write data persistently.</p>
+
+    <!-- Need for File Handling in C -->
+    <h3 style="color: #996600; margin-bottom: 10px;">Need for File Handling in C</h3>
+    <p>File handling enables C programs to store data permanently and access it across multiple program executions, unlike variables which hold data temporarily in memory.</p>
+
+    <!-- Sequential and Random Files -->
+    <h3 style="color: #996600; margin-bottom: 10px;">Sequential and Random Files</h3>
+    <ul style="margin-left: 20px; margin-bottom: 25px;">
+      <li><strong>Sequential Files:</strong> Data is accessed in a sequence, one record after another, from start to end.</li>
+      <li><strong>Random Files:</strong> Data can be accessed in any order using an index or position (random access).</li>
+    </ul>
+
+    <!-- File Handling Functions -->
+    <h3 style="color: #996600; margin-bottom: 10px;">File Handling Functions in C</h3>
+
+    <h4>1. fopen()</h4>
+    <p>Opens a file and returns a pointer to the FILE object.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+FILE *fopen(const char *filename, const char *mode);
+    </pre>
+
+    <h4>2. fclose()</h4>
+    <p>Closes an open file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int fclose(FILE *stream);
+    </pre>
+
+    <h4>3. getc()</h4>
+    <p>Reads a single character from a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int getc(FILE *stream);
+    </pre>
+
+    <h4>4. putc()</h4>
+    <p>Writes a single character to a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int putc(int char, FILE *stream);
+    </pre>
+
+    <h4>5. fprintf()</h4>
+    <p>Writes formatted output to a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int fprintf(FILE *stream, const char *format, ...);
+    </pre>
+
+    <h4>6. fscanf()</h4>
+    <p>Reads formatted input from a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int fscanf(FILE *stream, const char *format, ...);
+    </pre>
+
+    <h4>7. getw()</h4>
+    <p>Reads an integer from a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int getw(FILE *stream);
+    </pre>
+
+    <h4>8. putw()</h4>
+    <p>Writes an integer to a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int putw(int w, FILE *stream);
+    </pre>
+
+    <h4>9. fgets()</h4>
+    <p>Reads a string from a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+char *fgets(char *str, int n, FILE *stream);
+    </pre>
+
+    <h4>10. fputs()</h4>
+    <p>Writes a string to a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int fputs(const char *str, FILE *stream);
+    </pre>
+
+    <h4>11. fread()</h4>
+    <p>Reads block of data from a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+size_t fread(void *ptr, size_t size, size_t count, FILE *stream);
+    </pre>
+
+    <h4>12. fwrite()</h4>
+    <p>Writes block of data to a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);
+    </pre>
+
+    <h4>13. remove()</h4>
+    <p>Deletes a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int remove(const char *filename);
+    </pre>
+
+    <h4>14. rename()</h4>
+    <p>Renames a file.</p>
+    <pre style="background-color: #fff3cd; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int rename(const char *oldname, const char *newname);
+    </pre>
+
+  </section>
+<
+<body style="background-color: #eef6f7; margin: 0; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a;">
+
+  <section style="max-width: 900px; margin: 30px auto; background-color: #ffffff; padding: 30px 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); line-height: 1.65;">
+
+    <h2 style="color: #2a7a9a; border-bottom: 3px solid #74c0fc; padding-bottom: 6px; margin-bottom: 25px;">
+      Unit 4: C Programming - File Handling (Random Access & Modes)
+    </h2>
+
+    <!-- Random Access Functions -->
+    <h3 style="color: #176b87; margin-bottom: 12px;">Random Access Functions in C</h3>
+    <p>Random access functions allow moving the file pointer to specific locations in a file for reading or writing.</p>
+
+    <h4>1. <code>fseek()</code></h4>
+    <p>Sets the file position indicator to a specific location.</p>
+    <pre style="background-color: #d9f0fc; padding: 12px; border-radius: 6px; overflow-x: auto;">
+int fseek(FILE *stream, long int offset, int origin);
+    </pre>
+    <p><strong>Parameters:</strong></p>
+    <ul style="margin-left: 20px;">
+      <li><code>stream</code>: Pointer to a FILE object</li>
+      <li><code>offset</code>: Number of bytes to move the position indicator</li>
+      <li><code>origin</code>: Position from where offset is added (SEEK_SET, SEEK_CUR, SEEK_END)</li>
+    </ul>
+
+    <h4>2. <code>rewind()</code></h4>
+    <p>Sets the file position indicator to the beginning of the file.</p>
+    <pre style="background-color: #d9f0fc; padding: 12px; border-radius: 6px; overflow-x: auto;">
+void rewind(FILE *stream);
+    </pre>
+
+    <h4>3. <code>ftell()</code></h4>
+    <p>Returns the current value of the file position indicator.</p>
+    <pre style="background-color: #d9f0fc; padding: 12px; border-radius: 6px; overflow-x: auto;">
+long int ftell(FILE *stream);
+    </pre>
+
+    <!-- File Opening Modes -->
+    <h3 style="color: #176b87; margin-top: 30px; margin-bottom: 12px;">File Opening Modes</h3>
+    <p>File opening modes determine how a file is accessed by the program.</p>
+    <ul style="margin-left: 20px;">
+      <li><code>r</code>: Open for reading (file must exist)</li>
+      <li><code>r+</code>: Open for reading and writing (file must exist)</li>
+      <li><code>w</code>: Open for writing (creates file if doesn't exist, truncates if exists)</li>
+      <li><code>w+</code>: Open for reading and writing (creates or truncates file)</li>
+      <li><code>a</code>: Open for appending (writes data at end, creates file if needed)</li>
+      <li><code>a+</code>: Open for reading and appending</li>
+    </ul>
+
+    <!-- Steps to Work with File in C -->
+    <h3 style="color: #176b87; margin-top: 30px; margin-bottom: 12px;">Steps to Work with File in C</h3>
+    <ol style="margin-left: 20px;">
+      <li><strong>Define a File Pointer:</strong> <code>FILE *fp;</code></li>
+      <li><strong>Open the File:</strong> Use <code>fopen()</code> with required mode.</li>
+      <li><strong>Perform File Operations:</strong> Read, write, or append data.</li>
+      <li><strong>Close the File:</strong> Use <code>fclose()</code> to release resources.</li>
+    </ol>
+
+    <!-- More details -->
+    <h3 style="color: #176b87; margin-top: 30px;">Additional Concepts</h3>
+
+    <h4>Reading Data from Files</h4>
+    <p>Use functions like <code>fgetc()</code>, <code>fgets()</code>, <code>fread()</code>, or <code>fscanf()</code> to read data from files.</p>
+
+    <h4>Writing Data on Files</h4>
+    <p>Use functions like <code>fputc()</code>, <code>fputs()</code>, <code>fwrite()</code>, or <code>fprintf()</code> to write data to files.</p>
+
+    <h4>Appending Data to Files</h4>
+    <p>Open the file in append mode (<code>"a"</code> or <code>"a+"</code>) and write data. New data will be added at the end.</p>
+
+    <h4>End of File (EOF)</h4>
+    <p>EOF is a special marker to indicate the end of the file. Functions like <code>feof()</code> check if EOF has been reached during reading.</p>
+
+    <h4><code>typedef</code> Keyword in C</h4>
+    <p><code>typedef</code> is used to create new type names (aliases) for existing types. Useful for simplifying complex declarations.</p>
+    <pre style="background-color: #d9f0fc; padding: 12px; border-radius: 6px; overflow-x: auto;">
+typedef unsigned int uint;
+uint a = 10;  // Now 'uint' can be used instead of 'unsigned int'
+    </pre>
+
+  </section>
+
+
+
+
+</body>
+</html>
