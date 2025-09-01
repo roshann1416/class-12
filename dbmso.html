@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DBMS Overview</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #333; margin: 20px; line-height: 1.6;">
+
+  <section style="background-color: white; padding: 25px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto 40px auto;">
+    <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px;">
+      Unit 1: Database Management System
+    </h2>
+
+    <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">
+      Data, Information, and Features of Information
+    </h3>
+    <p><strong>Data</strong> refers to raw facts and figures without context. It can be numbers, text, images, or other outputs collected for reference or analysis.</p>
+    <p><strong>Information</strong> is processed, organized, or structured data that provides meaning and value. It helps in decision making.</p>
+    <h4 style="color: #5d6d7e; margin-top: 15px; margin-bottom: 8px;">Features of Information:</h4>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li style="margin-bottom: 6px;"><strong>Accuracy:</strong> Information must be correct and reliable.</li>
+      <li style="margin-bottom: 6px;"><strong>Timeliness:</strong> Information should be available when needed.</li>
+      <li style="margin-bottom: 6px;"><strong>Relevance:</strong> Information should be applicable to the problem or decision.</li>
+      <li style="margin-bottom: 6px;"><strong>Completeness:</strong> All necessary data should be included.</li>
+      <li style="margin-bottom: 6px;"><strong>Understandability:</strong> Information must be clear and easy to comprehend.</li>
+    </ul>
+
+    <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">
+      Database and Its Purpose
+    </h3>
+    <p>A <strong>Database</strong> is an organized collection of data stored electronically. Its primary purpose is to efficiently store, retrieve, and manage large amounts of data.</p>
+    <p>Databases enable:</p>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li style="margin-bottom: 6px;">Efficient data management and retrieval</li>
+      <li style="margin-bottom: 6px;">Data sharing among multiple users</li>
+      <li style="margin-bottom: 6px;">Data integrity and security</li>
+      <li style="margin-bottom: 6px;">Reduced data redundancy and inconsistency</li>
+    </ul>
+
+    <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">
+      Terminologies in Database
+    </h3>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li style="margin-bottom: 6px;"><strong>Table:</strong> A collection of related data entries organized in rows and columns.</li>
+      <li style="margin-bottom: 6px;"><strong>Field:</strong> A single piece of data; a column in a table representing an attribute.</li>
+      <li style="margin-bottom: 6px;"><strong>Record:</strong> A single, complete set of fields; a row in a table.</li>
+      <li style="margin-bottom: 6px;"><strong>Tuple:</strong> Another term for a record or row in a relational database.</li>
+      <li style="margin-bottom: 6px;"><strong>Object:</strong> A data entity that can contain both data and behavior (used in object-oriented databases).</li>
+      <li style="margin-bottom: 6px;"><strong>Keys:</strong> Attributes used to uniquely identify records within a table (e.g., Primary Key).</li>
+    </ul>
+
+    <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">
+      Data Types
+    </h3>
+    <p>Data types specify the kind of data that can be stored in a field. Common data types include:</p>
+    <ul style="margin-left: 20px; margin-bottom: 15px;">
+      <li style="margin-bottom: 6px;"><strong>Integer:</strong> Whole numbers without decimals.</li>
+      <li style="margin-bottom: 6px;"><strong>Float/Double:</strong> Numbers with decimal points.</li>
+      <li style="margin-bottom: 6px;"><strong>Character/String:</strong> Textual data.</li>
+      <li style="margin-bottom: 6px;"><strong>Date/Time:</strong> Dates and time values.</li>
+      <li style="margin-bottom: 6px;"><strong>Boolean:</strong> True/False values.</li>
+    </ul>
+
+    <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">
+      Data Dictionary
+    </h3>
+    <p>A <strong>Data Dictionary</strong> is a centralized repository that contains definitions, relationships, and attributes of data elements used in a database. It helps maintain consistency and provides metadata information for the database structure.</p>
+  </section>
+
+<section style="background-color: white; padding: 25px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto 40px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6;">
+  
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px;">Database Management System (DBMS)</h2>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
+  <p>A <strong>Database Management System (DBMS)</strong> is software that allows users to define, create, maintain, and control access to databases. It acts as an interface between the database and its users or application programs.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Objectives of DBMS</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">To provide efficient and convenient storage, retrieval, and updating of data.</li>
+    <li style="margin-bottom: 6px;">To ensure data integrity and security.</li>
+    <li style="margin-bottom: 6px;">To minimize data redundancy and inconsistency.</li>
+    <li style="margin-bottom: 6px;">To allow multiple users to access data concurrently.</li>
+    <li style="margin-bottom: 6px;">To enforce data integrity constraints.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Advantages of DBMS</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">Improved data sharing and data security.</li>
+    <li style="margin-bottom: 6px;">Data consistency and reduced redundancy.</li>
+    <li style="margin-bottom: 6px;">Efficient data access through query languages like SQL.</li>
+    <li style="margin-bottom: 6px;">Backup and recovery facilities.</li>
+    <li style="margin-bottom: 6px;">Enforces data integrity constraints.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Disadvantages of DBMS</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">High initial investment and setup cost.</li>
+    <li style="margin-bottom: 6px;">Complexity in design and management.</li>
+    <li style="margin-bottom: 6px;">Requires specialized personnel (DBA).</li>
+    <li style="margin-bottom: 6px;">Performance overhead for simple database applications.</li>
+  </ul>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">Types of Database Models</h2>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>Hierarchical Model:</strong> Data is organized in a tree-like structure with parent-child relationships.</li>
+    <li style="margin-bottom: 6px;"><strong>Network Model:</strong> Uses a graph structure allowing multiple parent and child records, supporting many-to-many relationships.</li>
+    <li style="margin-bottom: 6px;"><strong>Relational Model:</strong> Organizes data into tables (relations) with rows and columns; most widely used model.</li>
+    <li style="margin-bottom: 6px;"><strong>Entity-Relationship Model:</strong> Uses entities and relationships to model data and is often used for database design.</li>
+  </ul>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">Integrity Constraints and Types</h2>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>Domain Constraint:</strong> Ensures data entered in a column falls within a predefined domain or range of values.</li>
+    <li style="margin-bottom: 6px;"><strong>Entity Integrity Constraint:</strong> Ensures primary key values are unique and not null.</li>
+    <li style="margin-bottom: 6px;"><strong>Referential Integrity Constraint:</strong> Ensures foreign keys correspond to valid primary keys in related tables.</li>
+    <li style="margin-bottom: 6px;"><strong>Key Constraints:</strong> Rules that define candidate keys, primary keys, and alternate keys to uniquely identify tuples.</li>
+  </ul>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">Normalization</h2>
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
+  <p>Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Normal Forms</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>First Normal Form (1NF):</strong> Ensures atomicity of data; each field contains only indivisible values.</li>
+    <li style="margin-bottom: 6px;"><strong>Second Normal Form (2NF):</strong> Achieves 1NF and removes partial dependency on primary keys.</li>
+    <li style="margin-bottom: 6px;"><strong>Third Normal Form (3NF):</strong> Achieves 2NF and removes transitive dependency.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Advantages of Normalization</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">Eliminates data redundancy and inconsistency.</li>
+    <li style="margin-bottom: 6px;">Improves data integrity and organization.</li>
+    <li style="margin-bottom: 6px;">Makes database design more flexible and easier to maintain.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Disadvantages of Normalization</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">May lead to complex queries involving multiple tables.</li>
+    <li style="margin-bottom: 6px;">Performance overhead due to many table joins.</li>
+  </ul>
+
+</section>
+<section style="background-color: white; padding: 25px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto 40px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6;">
+  
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px;">Centralized and Distributed Database</h2>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
+  <p><strong>Centralized Database:</strong> All data is stored at a single central location and managed from there.</p>
+  <p><strong>Distributed Database:</strong> Data is stored across multiple physical locations but appears as a single database to users.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Advantages</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>Centralized:</strong> Easier to manage, better control and security, cost-effective for small systems.</li>
+    <li style="margin-bottom: 6px;"><strong>Distributed:</strong> Improved reliability, faster access for local users, scalability.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Disadvantages</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>Centralized:</strong> Single point of failure, slower access for remote users.</li>
+    <li style="margin-bottom: 6px;"><strong>Distributed:</strong> Complex to design and manage, higher costs.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 20px;">Comparison Diagram</h3>
+  <div style="display: flex; justify-content: space-around; margin-bottom: 30px;">
+    <div style="text-align:center;">
+      <strong>Centralized</strong><br />
+      <img src="https://i.imgur.com/ALZPHVW.png" alt="Centralized DB diagram" style="max-width: 200px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="text-align:center;">
+      <strong>Distributed</strong><br />
+      <img src="https://i.imgur.com/AXSO5bF.png" alt="Distributed DB diagram" style="max-width: 200px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+  </div>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">Database Security</h2>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
+  <p>Database security protects data from unauthorized access, misuse, and breaches.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Challenges</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">Protecting sensitive data from hackers and malicious users.</li>
+    <li style="margin-bottom: 6px;">Ensuring data privacy and compliance with laws.</li>
+    <li style="margin-bottom: 6px;">Managing user permissions correctly.</li>
+    <li style="margin-bottom: 6px;">Preventing data loss due to software or hardware failure.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Security Measures</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">Authentication and authorization mechanisms.</li>
+    <li style="margin-bottom: 6px;">Encryption of data at rest and in transit.</li>
+    <li style="margin-bottom: 6px;">Regular backups and recovery plans.</li>
+    <li style="margin-bottom: 6px;">Auditing and monitoring database access.</li>
+  </ul>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">DBA and Roles of DBA</h2>
+  <p><strong>Database Administrator (DBA)</strong> is responsible for managing and maintaining the database system to ensure availability, security, and performance.</p>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;">Installing and upgrading DBMS software.</li>
+    <li style="margin-bottom: 6px;">Defining database schema and structures.</li>
+    <li style="margin-bottom: 6px;">Managing database security and user access.</li>
+    <li style="margin-bottom: 6px;">Performance monitoring and tuning.</li>
+    <li style="margin-bottom: 6px;">Backup, recovery, and data integrity management.</li>
+  </ul>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">ER Diagrams</h2>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
+  <p>Entity-Relationship (ER) diagrams visually represent the database structure using entities, attributes, and relationships.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Key Concepts</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>Entity:</strong> A real-world object or concept (represented by a rectangle).</li>
+    <li style="margin-bottom: 6px;"><strong>Attributes:</strong> Properties of entities (represented by ovals).</li>
+    <li style="margin-bottom: 6px;"><strong>Relationships:</strong> Associations between entities (represented by diamonds).</li>
+    <li style="margin-bottom: 6px;"><strong>Cardinality:</strong> Specifies the number of instances in one entity related to instances in another (1:1, 1:N, N:M).</li>
+    <li style="margin-bottom: 6px;"><strong>Degree:</strong> Number of entities involved in a relationship.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 20px;">ER Symbols with Meaning</h3>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+    <tr style="background-color: #2980b9; color: white;">
+      <th style="padding: 8px; border: 1px solid #ddd;">Symbol</th>
+      <th style="padding: 8px; border: 1px solid #ddd;">Meaning</th>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Rectangle</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Entity</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Oval</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Attribute</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Diamond</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Relationship</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Double Oval</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Multi-valued Attribute</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Dashed Oval</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Derived Attribute</td>
+    </tr>
+  </table>
+
+  <h2 style="color: #2c3e50; border-bottom: 3px solid #2980b9; padding-bottom: 5px; margin-bottom: 15px; margin-top: 40px;">SQL (DDL and DML)</h2>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Data Constraints</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>NOT NULL:</strong> Ensures a column cannot have NULL value.</li>
+    <li style="margin-bottom: 6px;"><strong>UNIQUE:</strong> Ensures all values in a column are unique.</li>
+    <li style="margin-bottom: 6px;"><strong>PRIMARY KEY:</strong> Uniquely identifies each row in a table.</li>
+    <li style="margin-bottom: 6px;"><strong>AUTO INCREMENT:</strong> Automatically generates a unique number for new rows.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Operators</h3>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li style="margin-bottom: 6px;"><strong>AND:</strong> Combines two conditions; both must be true.</li>
+    <li style="margin-bottom: 6px;"><strong>OR:</strong> Either condition can be true.</li>
+    <li style="margin-bottom: 6px;"><strong>NOT:</strong> Negates a condition.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Where Clause</h3>
+  <p>Used to filter records based on specific conditions.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">Order By</h3>
+  <p>Sorts the result-set in ascending or descending order.</p>
+
+  <h3 style="color: #34495e; margin-top: 20px; margin-bottom: 10px;">SQL JOIN</h3>
+  <p>Used to combine rows from two or more tables based on a related column.</p>
+  <ul style="margin-left: 20px; margin-bottom: 15px;">
+    <li><strong>INNER JOIN:</strong> Returns records with matching values in both tables.</li>
+    <li><strong>LEFT JOIN:</strong> Returns all records from left table, and matched records from right table.</li>
+    <li><strong>RIGHT JOIN:</strong> Returns all records from right table, and matched records from left table.</li>
+    <li><strong>FULL JOIN:</strong> Returns all records when there is a match in either left or right table.</li>
+  </ul>
+
+  <h3 style="color: #34495e; margin-top: 10px; margin-bottom: 10px;">Example of INNER JOIN</h3>
+  <pre style="background-color: #f4f6f7; padding: 12px; border-radius: 5px; overflow-x: auto;">
+SELECT employees.name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.department_id = departments.id;
+  </pre>
+
+</section>
+</body>
+</html>
